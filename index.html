@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umma Salma Juti | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <h1>hellloo   </h1>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">Portfolio<span>.</span></a>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menubar">
+        <i class="fa-solid fa-bars fa-rotate-180" style="color: #669717;"></i>
+      </label>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+        <div class="icons">
+          <a href="https://www.facebook.com/jtus56"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/Juti2025/portfolio"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/umma-salma-juti/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <button class="btn"onclick="openModal()">Hire Me</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" data-aos="fade-in">
+    <div class="content">
+      <h3>Hello!!</h3>
+      <h1>I'm <span>Umma <br>Salma Juti</span></h1>
+      <h2>Web Developer</h2>
+      <button class="btn">Know More</button>
+      <button class="btn" onclick="openModal()">Hire Me</button>
+   </div>
+  </section>
+
+  <!-- Hire Form Modal -->
+<div id="hireModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Hire Me</h2>
+    <form action="https://formspree.io/f/xzzgnavp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Project Details" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+</div>
+
+
+  <!-- About Section -->
+  <section id="about" class="section" data-aos="fade-right">
+    <div class="content-center">
+      <h2>About Me</h2>
+      <p style="margin: 0px 30%;">
+        I am Umma Salma Juti, a passionate web developer with a love for clean code and user-friendly designs.
+        Currently pursuing skills in HTML, CSS, and digital marketing from eLearning & Earning Ltd. I love building
+        visually engaging and responsive websites.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section" data-aos="zoom-in">
+    <div class="content-center">
+      <h2>My Skills</h2>
+     <div class="skills-container">
+        <div class="skill-box floating"><img src="https://img.icons8.com/color/96/html-5.png"/><p>HTML</p></div>
+        <div class="skill-box floating"><img src="https://img.icons8.com/color/96/css3.png"/><p>CSS</p></div>
+        <div class="skill-box floating"><img src="https://tse3.mm.bing.net/th/id/OIP.I5LOue33Gb6pQ-nfnDSOagHaHQ?rs=1&pid=ImgDetMain&o=7&rm=3"/><p>SEO</p></div>
+        <div class="skill-box floating"><img src="https://tse2.mm.bing.net/th/id/OIP.pLUBu55bFWlqU0frGHJPXwHaH_?rs=1&pid=ImgDetMain&o=7&rm=3"/><p>SMM</p></div>
+        <div class="skill-box floating"><img src="https://img.icons8.com/color/96/figma--v1.png"/><p>Design</p></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Projects Section -->
+<section id="projects" class="section" data-aos="fade-up">
+  <div class="content-center">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="portfolio.png" alt="Project 1" />
+        <h3>Portfolio Website</h3>
+        <p>Explore the projects I've built with passion and purpose.</p>
+        <a href="https://juti2025.github.io/simantadey/" target="_blank" class="project-link">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="localservice.png" alt="Project 2" />
+        <h3>Local Service Website</h3>
+        <p>Discover my recent projects where creativity meets functionality — built with precision and passion."</p>
+        <a href="https://juti2025.github.io/local-service/" target="_blank" class="project-link">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="e-commerce.png" alt="Project 3" />
+        <h3>E-commerce</h3>
+        <p>A fully responsive e-commerce site with smooth user experience and secure checkout system.</p>
+        <a href="#" target="_blank" class="project-link">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/your-gmail-code" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required /><br/>
+        <input type="email" name="email" placeholder="Your Email" required /><br/>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea><br/>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align:center; padding: 20px; background:#111;">
+    <p>© 2025 Umma Salma Juti | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <script>
+function openModal() {
+  document.getElementById("hireModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("hireModal").style.display = "none";
+}
+window.onclick = function(event) {
+  const modal = document.getElementById("hireModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
 </body>
 </html>
+
+
